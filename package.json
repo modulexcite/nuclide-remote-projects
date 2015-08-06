@@ -1,19 +1,19 @@
 {
   "dependencies": {
-    "nuclide-atom-helpers": "0.0.26",
-    "nuclide-client": "0.0.26",
-    "nuclide-keytar-wrapper": "0.0.26",
-    "nuclide-logging": "0.0.26",
-    "nuclide-remote-connection": "0.0.26",
-    "nuclide-remote-uri": "0.0.26",
-    "nuclide-ssh-dialog": "0.0.26"
+    "nuclide-atom-helpers": "0.0.28",
+    "nuclide-client": "0.0.28",
+    "nuclide-keytar-wrapper": "0.0.28",
+    "nuclide-logging": "0.0.28",
+    "nuclide-remote-connection": "0.0.28",
+    "nuclide-remote-uri": "0.0.28",
+    "nuclide-ssh-dialog": "0.0.28"
   },
   "description": "Manages remote projects",
   "devDependencies": {
-    "nuclide-atom-interfaces": "0.0.26"
+    "nuclide-atom-interfaces": "0.0.28"
   },
   "engines": {
-    "atom": ">=1.0.3"
+    "atom": ">=1.0.4"
   },
   "main": "./lib/main",
   "name": "nuclide-remote-projects",
@@ -34,5 +34,5 @@
     }
   },
   "repository": "https://github.com/facebooknuclideapm/nuclide-remote-projects",
-  "version": "0.0.26"
+  "version": "0.0.28"
 }
