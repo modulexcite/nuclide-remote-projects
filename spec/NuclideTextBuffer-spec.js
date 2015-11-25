@@ -9,18 +9,20 @@
  * the root directory of this source tree.
  */
 
-var NuclideTextBuffer = require('../lib/NuclideTextBuffer');
-var {RemoteFile, RemoteConnection} = require('nuclide-remote-connection');
+const NuclideTextBuffer = require('../lib/NuclideTextBuffer');
+const {RemoteFile, RemoteConnection} = require('nuclide-remote-connection');
 
 describe('NuclideTextBuffer', () => {
 
-  var buffer = null;
-  var connection = null;
-  var filePath = __filename;
+  let buffer = null;
+  let connection = null;
+  const filePath = __filename;
 
   beforeEach(() => {
     connection = new RemoteConnection({});
     connection._config = {host: 'most.fb.com', port:9090};
+    // Mock watcher service handlers registry.
+    connection._addHandlersForEntry = () => {};
     buffer = new NuclideTextBuffer(connection, {});
     // Disable file watch subscriptions, not needed here.
     buffer.subscribeToFile = () => {};

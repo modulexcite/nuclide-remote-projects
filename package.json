@@ -7,27 +7,34 @@
     }
   },
   "dependencies": {
-    "nuclide-atom-helpers": "0.0.32",
-    "nuclide-client": "0.0.32",
-    "nuclide-keytar-wrapper": "0.0.32",
-    "nuclide-logging": "0.0.32",
-    "nuclide-remote-connection": "0.0.32",
-    "nuclide-remote-uri": "0.0.32",
-    "nuclide-ssh-dialog": "0.0.32",
-    "react-for-atom": "0.13.6",
+    "nuclide-atom-helpers": "0.0.35",
+    "nuclide-client": "0.0.35",
+    "nuclide-keytar-wrapper": "0.0.35",
+    "nuclide-logging": "0.0.35",
+    "nuclide-remote-connection": "0.0.35",
+    "nuclide-remote-uri": "0.0.35",
+    "nuclide-ssh-dialog": "0.0.35",
+    "react-for-atom": "0.14.3",
     "rx": "3.1.1"
   },
   "description": "Manages remote projects",
   "devDependencies": {
-    "nuclide-external-interfaces": "0.0.32"
+    "nuclide-home-interfaces": "0.0.35"
   },
   "engines": {
-    "atom": ">=1.0.9"
+    "atom": ">=1.1.0"
   },
   "license": "SEE LICENSE IN LICENSE",
   "main": "./lib/main",
   "name": "nuclide-remote-projects",
   "nuclide": {
+    "config": {
+      "shutdownServerAfterDisconnection": {
+        "default": true,
+        "description": "Shutdown nuclide server after all remote projects are disconnected",
+        "type": "boolean"
+      }
+    },
     "packageType": "Atom",
     "testRunner": "apm"
   },
@@ -41,8 +48,13 @@
       "versions": {
         "0.1.0": "createRemoteDirectorySearcher"
       }
+    },
+    "nuclide-home.homeFragments": {
+      "versions": {
+        "0.0.0": "getHomeFragments"
+      }
     }
   },
   "repository": "https://github.com/facebooknuclideapm/nuclide-remote-projects",
-  "version": "0.0.32"
+  "version": "0.0.35"
 }
